@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+		<Link rel="stylesheet" href="/css/user.css">
+    </head>
+<body>
+
+<div id="container">
+	<%- include('../include/header.ejs'); %>
+    <%- include('../include/navigation.ejs'); %>
+	<div id="content">
+	
+		<div id="user-join">
+			<form id="join-form" action="/user/join" method="post">
+				<input placeholder="아이디" id="id" name="id" type="text" value="">
+				<button id="btn-checkid" >중복체크</button>
+				<img id="img-checkid" src="images/check.png" width="16px" style="display:none"><br>
+				<input placeholder="비밀번호" id="password" name="password" type="text" value=""><br>
+				<input placeholder="이름" id="name" name="name" type="text" value=""><br>
+				<input placeholder="이메일" id = "email" name="email" type="text" value=""><br>
+				<input type="submit" value="가입하기">
+			</form>
+		</div>	
+	</div>
+	<%- include('../include/footer.ejs'); %>
+</div>
+</body>
+</html>
